@@ -36,6 +36,9 @@
                             <outlet property="delegate" destination="TIh-TT-eQe" id="O1S-kK-pOe"/>
                         </connections>
                     </collectionView>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="reuseIdentifier" value="Cell"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="dataSource" destination="aa6-Zc-Cg2" id="RsW-mb-QgV"/>
                     </connections>
