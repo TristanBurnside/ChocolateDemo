@@ -14,6 +14,20 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6A7E3EAE1C5DE62F00411E28"
+               BuildableName = "Chocolate.framework"
+               BlueprintName = "Chocolate"
+               ReferencedContainer = "container:../Chocolate/Chocolate.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "6A909ABD1BE451650074523C"
                BuildableName = "ChocolatePuppies.app"
                BlueprintName = "ChocolatePuppies"

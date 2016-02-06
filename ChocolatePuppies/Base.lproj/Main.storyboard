@@ -1,25 +1,102 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="TIh-TT-eQe">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Chocolate Collection View Controller-->
+        <scene sceneID="vQh-Ma-i18">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <collectionViewController id="TIh-TT-eQe" customClass="ChocolateCollectionViewController" customModule="Chocolate" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="2TI-i8-OJt">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="30" id="6DQ-2W-fCw">
+                            <size key="itemSize" width="100" height="100"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="z71-sa-lx5" customClass="ImageCollectionViewCell" customModule="ChocolatePuppies" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <connections>
+                                    <segue destination="hXi-NP-LQR" kind="presentation" identifier="CellSegue" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="xAX-i8-SjX"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="TIh-TT-eQe" id="deB-2b-gcf"/>
+                            <outlet property="delegate" destination="TIh-TT-eQe" id="O1S-kK-pOe"/>
+                        </connections>
+                    </collectionView>
+                    <connections>
+                        <outlet property="dataSource" destination="aa6-Zc-Cg2" id="RsW-mb-QgV"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fCc-Ax-5In" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="aa6-Zc-Cg2" customClass="PuppyDataManager" customModule="ChocolatePuppies" customModuleProvider="target"/>
             </objects>
+            <point key="canvasLocation" x="-89" y="287"/>
+        </scene>
+        <!--Chocolate View Controller-->
+        <scene sceneID="tz0-s1-bcw">
+            <objects>
+                <viewController id="hXi-NP-LQR" customClass="ChocolateViewController" customModule="Chocolate" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="we0-Dx-dFg"/>
+                        <viewControllerLayoutGuide type="bottom" id="4yJ-le-4Fn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OMV-sS-EUJ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wZg-ic-wet">
+                                <rect key="frame" x="0.0" y="20" width="600" height="600"/>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t2A-ew-E9x">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="hpr-UH-Dzm">
+                                        <barButtonItem key="rightBarButtonItem" title="Close" id="yZd-K1-SWK">
+                                            <connections>
+                                                <segue destination="hcf-IA-T61" kind="unwind" unwindAction="prepareForUnwind:" id="agV-Qc-XoJ"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="t2A-ew-E9x" firstAttribute="leading" secondItem="OMV-sS-EUJ" secondAttribute="leading" id="BEi-fz-ebQ"/>
+                            <constraint firstItem="t2A-ew-E9x" firstAttribute="top" secondItem="OMV-sS-EUJ" secondAttribute="top" id="Lqz-np-nTw"/>
+                            <constraint firstItem="wZg-ic-wet" firstAttribute="top" secondItem="we0-Dx-dFg" secondAttribute="bottom" id="Ors-LQ-5fT"/>
+                            <constraint firstItem="wZg-ic-wet" firstAttribute="width" secondItem="OMV-sS-EUJ" secondAttribute="width" id="avZ-YT-n6B"/>
+                            <constraint firstItem="wZg-ic-wet" firstAttribute="height" secondItem="OMV-sS-EUJ" secondAttribute="height" id="dpV-z4-bf8"/>
+                            <constraint firstItem="wZg-ic-wet" firstAttribute="leading" secondItem="OMV-sS-EUJ" secondAttribute="leading" id="nfi-mY-H3l"/>
+                            <constraint firstAttribute="trailing" secondItem="t2A-ew-E9x" secondAttribute="trailing" id="w24-A7-AId"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="configureDataOperation" destination="0uE-mh-B9v" id="k9p-yz-48r"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bcq-dJ-gX0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="hcf-IA-T61" userLabel="Exit" sceneMemberID="exit"/>
+                <customObject id="0uE-mh-B9v" customClass="ImageConfigureOperation" customModule="ChocolatePuppies" customModuleProvider="target">
+                    <connections>
+                        <outlet property="imageView" destination="wZg-ic-wet" id="drC-Mh-RAi"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="558" y="287"/>
         </scene>
     </scenes>
 </document>

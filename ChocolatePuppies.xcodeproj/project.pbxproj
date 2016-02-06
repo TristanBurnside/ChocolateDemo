@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A2CD45A1C6587D4002C00D9 /* Chocolate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A2CD4591C6587D4002C00D9 /* Chocolate.framework */; };
+		6A7E3E931C42346A00411E28 /* ImageConfigureOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7E3E921C42346A00411E28 /* ImageConfigureOperation.swift */; };
 		6A909AC21BE451650074523C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A909AC11BE451650074523C /* AppDelegate.swift */; };
-		6A909AC41BE451650074523C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A909AC31BE451650074523C /* ViewController.swift */; };
 		6A909AC71BE451650074523C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A909AC51BE451650074523C /* Main.storyboard */; };
 		6A909AC91BE451650074523C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A909AC81BE451650074523C /* Assets.xcassets */; };
 		6A909ACC1BE451650074523C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A909ACA1BE451650074523C /* LaunchScreen.storyboard */; };
 		6A909AD71BE451660074523C /* ChocolatePuppiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A909AD61BE451660074523C /* ChocolatePuppiesTests.swift */; };
+		6A909AE41BE48E4E0074523C /* PuppyDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A909AE31BE48E4E0074523C /* PuppyDataManager.swift */; };
+		6A909AE61BE4924A0074523C /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A909AE51BE4924A0074523C /* ImageCollectionViewCell.swift */; };
+		6AEC12631BE86C6C004E7158 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AEC12621BE86C6C004E7158 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,9 +30,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6A2CD4591C6587D4002C00D9 /* Chocolate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Chocolate.framework; path = "../Chocolate/build/Debug-iphoneos/Chocolate.framework"; sourceTree = "<group>"; };
+		6A7E3E921C42346A00411E28 /* ImageConfigureOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageConfigureOperation.swift; sourceTree = "<group>"; };
 		6A909ABE1BE451650074523C /* ChocolatePuppies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChocolatePuppies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A909AC11BE451650074523C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6A909AC31BE451650074523C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6A909AC61BE451650074523C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6A909AC81BE451650074523C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6A909ACB1BE451650074523C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +41,9 @@
 		6A909AD21BE451660074523C /* ChocolatePuppiesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChocolatePuppiesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A909AD61BE451660074523C /* ChocolatePuppiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChocolatePuppiesTests.swift; sourceTree = "<group>"; };
 		6A909AD81BE451660074523C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A909AE31BE48E4E0074523C /* PuppyDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PuppyDataManager.swift; sourceTree = "<group>"; };
+		6A909AE51BE4924A0074523C /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		6AEC12621BE86C6C004E7158 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A2CD45A1C6587D4002C00D9 /* Chocolate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +65,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A2CD4631C658BE4002C00D9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6A909AE51BE4924A0074523C /* ImageCollectionViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		6A2CD4641C658BF9002C00D9 /* Data Access */ = {
+			isa = PBXGroup;
+			children = (
+				6A909AE31BE48E4E0074523C /* PuppyDataManager.swift */,
+			);
+			name = "Data Access";
+			sourceTree = "<group>";
+		};
+		6A2CD4651C658C0B002C00D9 /* View Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				6A7E3E921C42346A00411E28 /* ImageConfigureOperation.swift */,
+			);
+			name = "View Configurations";
+			sourceTree = "<group>";
+		};
 		6A909AB51BE451650074523C = {
 			isa = PBXGroup;
 			children = (
 				6A909AC01BE451650074523C /* ChocolatePuppies */,
 				6A909AD51BE451660074523C /* ChocolatePuppiesTests */,
 				6A909ABF1BE451650074523C /* Products */,
+				6A2CD4591C6587D4002C00D9 /* Chocolate.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,12 +111,15 @@
 		6A909AC01BE451650074523C /* ChocolatePuppies */ = {
 			isa = PBXGroup;
 			children = (
-				6A909AC11BE451650074523C /* AppDelegate.swift */,
-				6A909AC31BE451650074523C /* ViewController.swift */,
+				6A2CD4631C658BE4002C00D9 /* Views */,
+				6A2CD4651C658C0B002C00D9 /* View Configurations */,
+				6A2CD4641C658BF9002C00D9 /* Data Access */,
 				6A909AC51BE451650074523C /* Main.storyboard */,
+				6A909AC11BE451650074523C /* AppDelegate.swift */,
+				6AEC12621BE86C6C004E7158 /* Images.xcassets */,
 				6A909AC81BE451650074523C /* Assets.xcassets */,
-				6A909ACA1BE451650074523C /* LaunchScreen.storyboard */,
 				6A909ACD1BE451650074523C /* Info.plist */,
+				6A909ACA1BE451650074523C /* LaunchScreen.storyboard */,
 			);
 			path = ChocolatePuppies;
 			sourceTree = "<group>";
@@ -177,6 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A909ACC1BE451650074523C /* LaunchScreen.storyboard in Resources */,
+				6AEC12631BE86C6C004E7158 /* Images.xcassets in Resources */,
 				6A909AC91BE451650074523C /* Assets.xcassets in Resources */,
 				6A909AC71BE451650074523C /* Main.storyboard in Resources */,
 			);
@@ -196,8 +234,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A909AC41BE451650074523C /* ViewController.swift in Sources */,
+				6A909AE41BE48E4E0074523C /* PuppyDataManager.swift in Sources */,
+				6A909AE61BE4924A0074523C /* ImageCollectionViewCell.swift in Sources */,
 				6A909AC21BE451650074523C /* AppDelegate.swift in Sources */,
+				6A7E3E931C42346A00411E28 /* ImageConfigureOperation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,6 +266,7 @@
 				6A909AC61BE451650074523C /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		6A909ACA1BE451650074523C /* LaunchScreen.storyboard */ = {
@@ -234,6 +275,7 @@
 				6A909ACB1BE451650074523C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -387,6 +429,7 @@
 				6A909ADD1BE451660074523C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6A909ADE1BE451660074523C /* Build configuration list for PBXNativeTarget "ChocolatePuppiesTests" */ = {
 			isa = XCConfigurationList;
@@ -395,6 +438,7 @@
 				6A909AE01BE451660074523C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
