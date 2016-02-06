@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "AC66F7194C3CEF301FCCA31CB858A7E5D4CDE038",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "AC66F7194C3CEF301FCCA31CB858A7E5D4CDE038" : 0,
+    "395A7E17D5C6FA0530E01F75ACA02F0697F7162E" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "2127AD12-B9A2-4743-99FE-4AC028A7B784",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "AC66F7194C3CEF301FCCA31CB858A7E5D4CDE038" : "ChocolatePuppies\/",
+    "395A7E17D5C6FA0530E01F75ACA02F0697F7162E" : "Chocolate\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ChocolatePuppies",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ChocolatePuppies.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:TristanBurnside\/Chocolate.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "395A7E17D5C6FA0530E01F75ACA02F0697F7162E"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:TristanBurnside\/ChocolateDemo.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "AC66F7194C3CEF301FCCA31CB858A7E5D4CDE038"
+    }
+  ]
+}

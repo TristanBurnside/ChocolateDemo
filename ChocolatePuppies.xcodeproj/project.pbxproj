@@ -70,7 +70,7 @@
 			children = (
 				6A909AE51BE4924A0074523C /* ImageCollectionViewCell.swift */,
 			);
-			name = Views;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		6A2CD4641C658BF9002C00D9 /* Data Access */ = {
@@ -78,7 +78,7 @@
 			children = (
 				6A909AE31BE48E4E0074523C /* PuppyDataManager.swift */,
 			);
-			name = "Data Access";
+			path = "Data Access";
 			sourceTree = "<group>";
 		};
 		6A2CD4651C658C0B002C00D9 /* View Configurations */ = {
@@ -86,7 +86,7 @@
 			children = (
 				6A7E3E921C42346A00411E28 /* ImageConfigureOperation.swift */,
 			);
-			name = "View Configurations";
+			path = "View Configurations";
 			sourceTree = "<group>";
 		};
 		6A909AB51BE451650074523C = {
@@ -111,15 +111,15 @@
 		6A909AC01BE451650074523C /* ChocolatePuppies */ = {
 			isa = PBXGroup;
 			children = (
-				6A2CD4631C658BE4002C00D9 /* Views */,
-				6A2CD4651C658C0B002C00D9 /* View Configurations */,
 				6A2CD4641C658BF9002C00D9 /* Data Access */,
-				6A909AC51BE451650074523C /* Main.storyboard */,
+				6A2CD4651C658C0B002C00D9 /* View Configurations */,
+				6A2CD4631C658BE4002C00D9 /* Views */,
 				6A909AC11BE451650074523C /* AppDelegate.swift */,
-				6AEC12621BE86C6C004E7158 /* Images.xcassets */,
 				6A909AC81BE451650074523C /* Assets.xcassets */,
+				6AEC12621BE86C6C004E7158 /* Images.xcassets */,
 				6A909ACD1BE451650074523C /* Info.plist */,
 				6A909ACA1BE451650074523C /* LaunchScreen.storyboard */,
+				6A909AC51BE451650074523C /* Main.storyboard */,
 			);
 			path = ChocolatePuppies;
 			sourceTree = "<group>";
