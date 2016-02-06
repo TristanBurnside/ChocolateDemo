@@ -7,57 +7,7 @@
 //
 
 import UIKit
-import AVFoundation
 import Chocolate
-
-public struct ImageCellData {
-    var image : UIImage
-    var thumbnailSize: CGSize
-    
-    //I don't really get why self is required here...
-    lazy var thumbnail : UIImage = generateThumbnail(self)()
-    
-    init(image: UIImage) {
-        self.image = image;
-        thumbnailSize = CGSize.zero
-    }
-    
-    private func generateThumbnail() -> UIImage {
-        let scale: CGFloat = 0.0 // Automatically use scale factor of main screen
-        
-        let thumbnailAspectFitSize = AVMakeRectWithAspectRatioInsideRect(image.size, CGRectMake(0,0,thumbnailSize.height,thumbnailSize.width))
-        
-        UIGraphicsBeginImageContextWithOptions(thumbnailAspectFitSize.size, true, scale)
-        image.drawInRect(CGRect(origin: CGPointZero, size: thumbnailSize))
-        
-        let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        
-        return scaledImage;
-    }
-}
-
-class ImageCellSegueOperation : CellSegueOperation {
-    override func main() {
-        if let cell = cell as? ImageCollectionViewCell,
-               destinationViewController = destinationViewController as? ChocolateViewController {
-            destinationViewController.configurationData = cell.currentData?.image
-        }
-    }
-}
-
-class ImageCellConfigurationOperation : CellConfigurationOperation {
-    override func main() {
-        if var cellData : ImageCellData = dataManager!.dataForItem(indexPath!.section, item: indexPath!.item) {
-            if let cell = cell as? ImageCollectionViewCell {
-                cellData.thumbnailSize = cell.imageView.frame.size
-                dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                    cell.configureWithData(cellData)
-                })
-            }
-        }
-    }
-}
 
 class ImageCollectionViewCell: UICollectionViewCell, ChocolateCell {
     
@@ -109,4 +59,26 @@ class ImageCollectionViewCell: UICollectionViewCell, ChocolateCell {
         imageView.image = currentData?.thumbnail
     }
     
+}
+
+class ImageCellSegueOperation : CellSegueOperation {
+    override func main() {
+        if let cell = cell as? ImageCollectionViewCell,
+            destinationViewController = destinationViewController as? ChocolateViewController {
+                destinationViewController.configurationData = cell.currentData?.image
+        }
+    }
+}
+
+class ImageCellConfigurationOperation : CellConfigurationOperation {
+    override func main() {
+        if var cellData : ImageCellData = dataManager!.dataForItem(indexPath!.section, item: indexPath!.item) {
+            if let cell = cell as? ImageCollectionViewCell {
+                cellData.thumbnailSize = cell.imageView.frame.size
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    cell.configureWithData(cellData)
+                })
+            }
+        }
+    }
 }
