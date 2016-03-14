@@ -14,11 +14,11 @@ class ImageCollectionViewCell: UICollectionViewCell, ChocolateCell {
     private var imageView : UIImageView
     var currentData : ImageCellData?
     
-    class func cellConfigurationOperation() -> CellConfigurationOperation {
+    static func cellConfigurationOperation() -> CellConfigurationOperation {
         return ImageCellConfigurationOperation()
     }
     
-    class func cellSegueOperation() -> CellSegueOperation {
+    static func cellSegueOperation() -> CellSegueOperation {
         return ImageCellSegueOperation()
     }
     
