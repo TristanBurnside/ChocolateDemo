@@ -14,8 +14,8 @@ class ImageCollectionViewCell: UICollectionViewCell, ChocolateCell {
     private var imageView : UIImageView
     var currentData : ImageCellData?
     
-    static func cellConfigurationOperation() -> CellConfigurationOperation {
-        return ImageCellConfigurationOperation()
+    static func cellConfigurationOperation() -> CellConfigurationOperation.Type {
+        return ImageCellConfigurationOperation.self
     }
     
     static func cellSegueOperation() -> CellSegueOperation {
@@ -64,7 +64,7 @@ class ImageCollectionViewCell: UICollectionViewCell, ChocolateCell {
 class ImageCellSegueOperation : CellSegueOperation {
     override func main() {
         if let cell = cell as? ImageCollectionViewCell,
-            destinationViewController = destinationViewController as? ChocolateViewController {
+           var destinationViewController = destinationViewController as? ConfigurableViewController {
                 destinationViewController.configurationData = cell.currentData?.image
         }
     }
@@ -72,7 +72,7 @@ class ImageCellSegueOperation : CellSegueOperation {
 
 class ImageCellConfigurationOperation : CellConfigurationOperation {
     override func main() {
-        if var cellData : ImageCellData = dataManager!.dataForItem(indexPath!.section, item: indexPath!.item) {
+        if var cellData : ImageCellData = dataManager.dataForItem(indexPath.section, item: indexPath.item) {
             if let cell = cell as? ImageCollectionViewCell {
                 cellData.thumbnailSize = cell.imageView.frame.size
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in

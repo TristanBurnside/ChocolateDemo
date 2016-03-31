@@ -8,7 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		6A2CD45A1C6587D4002C00D9 /* Chocolate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A2CD4591C6587D4002C00D9 /* Chocolate.framework */; };
+		6A54CBE31CA65CBD00247AFD /* TagFilterConfigureOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A54CBE21CA65CBD00247AFD /* TagFilterConfigureOperation.swift */; };
+		6A54CBE51CADE51A00247AFD /* FilterDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A54CBE41CADE51A00247AFD /* FilterDataManager.swift */; };
 		6A6ADA431C6606AD0021B6A7 /* ImageCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6ADA421C6606AD0021B6A7 /* ImageCellData.swift */; };
+		6A6ADA4D1C969B150021B6A7 /* PuppyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6ADA4C1C969B150021B6A7 /* PuppyData.swift */; };
+		6A6ADA4F1C96B4850021B6A7 /* FilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6ADA4E1C96B4850021B6A7 /* FilterTableViewCell.swift */; };
 		6A7E3E931C42346A00411E28 /* ImageConfigureOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7E3E921C42346A00411E28 /* ImageConfigureOperation.swift */; };
 		6A909AC21BE451650074523C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A909AC11BE451650074523C /* AppDelegate.swift */; };
 		6A909AC71BE451650074523C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A909AC51BE451650074523C /* Main.storyboard */; };
@@ -32,7 +36,11 @@
 
 /* Begin PBXFileReference section */
 		6A2CD4591C6587D4002C00D9 /* Chocolate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Chocolate.framework; path = "../Chocolate/build/Debug-iphoneos/Chocolate.framework"; sourceTree = "<group>"; };
+		6A54CBE21CA65CBD00247AFD /* TagFilterConfigureOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagFilterConfigureOperation.swift; sourceTree = "<group>"; };
+		6A54CBE41CADE51A00247AFD /* FilterDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterDataManager.swift; sourceTree = "<group>"; };
 		6A6ADA421C6606AD0021B6A7 /* ImageCellData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCellData.swift; sourceTree = "<group>"; };
+		6A6ADA4C1C969B150021B6A7 /* PuppyData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PuppyData.swift; sourceTree = "<group>"; };
+		6A6ADA4E1C96B4850021B6A7 /* FilterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterTableViewCell.swift; sourceTree = "<group>"; };
 		6A7E3E921C42346A00411E28 /* ImageConfigureOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageConfigureOperation.swift; sourceTree = "<group>"; };
 		6A909ABE1BE451650074523C /* ChocolatePuppies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChocolatePuppies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A909AC11BE451650074523C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				6A909AE51BE4924A0074523C /* ImageCollectionViewCell.swift */,
+				6A6ADA4E1C96B4850021B6A7 /* FilterTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -79,6 +88,8 @@
 			isa = PBXGroup;
 			children = (
 				6A909AE31BE48E4E0074523C /* PuppyDataManager.swift */,
+				6A6ADA4C1C969B150021B6A7 /* PuppyData.swift */,
+				6A54CBE41CADE51A00247AFD /* FilterDataManager.swift */,
 			);
 			path = "Data Access";
 			sourceTree = "<group>";
@@ -87,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				6A7E3E921C42346A00411E28 /* ImageConfigureOperation.swift */,
+				6A54CBE21CA65CBD00247AFD /* TagFilterConfigureOperation.swift */,
 			);
 			path = "View Configurations";
 			sourceTree = "<group>";
@@ -248,7 +260,11 @@
 				6A909AE41BE48E4E0074523C /* PuppyDataManager.swift in Sources */,
 				6A909AE61BE4924A0074523C /* ImageCollectionViewCell.swift in Sources */,
 				6A909AC21BE451650074523C /* AppDelegate.swift in Sources */,
+				6A54CBE31CA65CBD00247AFD /* TagFilterConfigureOperation.swift in Sources */,
+				6A54CBE51CADE51A00247AFD /* FilterDataManager.swift in Sources */,
 				6A7E3E931C42346A00411E28 /* ImageConfigureOperation.swift in Sources */,
+				6A6ADA4D1C969B150021B6A7 /* PuppyData.swift in Sources */,
+				6A6ADA4F1C96B4850021B6A7 /* FilterTableViewCell.swift in Sources */,
 				6A6ADA431C6606AD0021B6A7 /* ImageCellData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

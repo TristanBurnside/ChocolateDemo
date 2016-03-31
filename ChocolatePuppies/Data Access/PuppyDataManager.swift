@@ -10,10 +10,20 @@ import UIKit
 import Chocolate
 
 //It is not clear to me why this must be an NSObject but I suspect it has something to do with being referenced from a storyboard
-class PuppyDataManager : NSObject, ChocolateCollectionDataSource {
+class PuppyDataManager : NSObject, ChocolateCellDataSource {
+    
+    var needsReload : Bool = false
+    private var puppyData : [PuppyData] = []
+    
+    var filterTag : String? {
+        didSet {
+            puppyData = loadPuppyData(filterTag)
+            needsReload = true;
+        }
+    }
     
     func loadDataForItems() {
-        //No need to do anything here because images will be loaded as needed
+        puppyData = loadPuppyData(nil)
     }
     
     func numberOfSections() -> Int {
@@ -21,10 +31,26 @@ class PuppyDataManager : NSObject, ChocolateCollectionDataSource {
     }
     
     func numberOfItemsInSection(section: Int) -> Int {
-        return 110;
+        return puppyData.count;
     }
     
     func dataForItem<T>(section: Int, item: Int) -> T? {
-        return ImageCellData(image: UIImage(named: "\(item + 1)")!) as? T
+        if let image = UIImage(named: "\(puppyData[item].imageIndex + 1)") {
+            return ImageCellData(image: image) as? T
+        }
+        return nil
+    }
+}
+
+func loadPuppyData(tag: String?) -> [PuppyData] {
+    let data = [PuppyData(imageIndex:1, tags: ["small", "all"]),
+    PuppyData(imageIndex:2, tags: ["medium", "all"]),
+    PuppyData(imageIndex:3, tags: ["large", "all"]),
+    PuppyData(imageIndex:4, tags: ["black", "all"])]
+    
+    if let tag = tag {
+        return data.filter{$0.tags.contains(tag)}
+    } else {
+        return data
     }
 }
